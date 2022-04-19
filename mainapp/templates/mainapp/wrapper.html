@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    </head>
+    <body style="background: silver">
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Hello, Me!</h1>
+                <h1> {% include "mainapp/includes/some_html.html" %}</h1>
+                    {% block content %}
+                    {% endblock %}
+                
+                <p>
+                    <a href="/" class="btn btn-success btn-lg">Main page</a>
+                    <a href="/news" class="btn btn-primary btn-lg">News&raquo;</a>  
+                    <a href="/contact" class="btn btn-info btn-lg">Contact</a>  
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <img src="{% static 'mainapp/image/bg.jpg' %}" class="img-thmbnail">
+            <hr>
+            &copy; Copyright 2022
+        </div>                      
+        
+    </body>
+</html>
